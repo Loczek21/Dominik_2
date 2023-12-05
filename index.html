@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #1a1a1a; /* kolor tła przypominający kopalnię */
       margin: 0;
       padding: 0;
       text-align: center;
@@ -39,7 +39,7 @@
       position: relative;
       width: 100%;
       height: 400px;
-      background-color: #b3b3b3;
+      background-color: #333; /* kolor tła przypominający kopalnię */
       overflow: hidden;
     }
 
@@ -48,8 +48,8 @@
       bottom: 0;
       width: 50px;
       height: 100px;
-      background-color: #ff0000; /* kolor czerwony dla górników */
-      border-radius: 5px;
+      background-color: #ffcc00; /* kolor postaci przypominającej ludzi */
+      border-radius: 50%;
       animation: mining 2s linear infinite;
     }
 
@@ -72,8 +72,15 @@
       transform: translateX(-50%);
       width: 100px;
       height: 100px; /* większa ilość węgla */
+      background-color: transparent;
+    }
+
+    .coal-piece {
+      width: 20px;
+      height: 20px;
       background-color: #000;
-      border-radius: 5px;
+      border-radius: 50%;
+      position: absolute;
       animation: coal-fall 2s linear infinite;
     }
 
@@ -86,18 +93,16 @@
       }
     }
   </style>
-  <title>Święta Barbara - Patronka Górników</title>
+  <title>Kopalnia - Ludzie i Węgiel</title>
 </head>
 <body>
 
   <header>
-    <h1>Święta Barbara - Patronka Górników</h1>
+    <h1>Kopalnia - Ludzie i Węgiel</h1>
   </header>
 
   <main>
-    <p>Święta Barbara, znana również jako Barbara z Nikomedii, to męczennica chrześcijańska uznawana za patronkę górników. Legenda mówi, że Święta Barbara była córką bogatego pogańskiego kupca, który zdecydował się zamykać ją w wieży, aby chronić przed światem zewnętrznym. Barbara jednak przyjęła chrześcijaństwo, co doprowadziło do jej męczeństwa.</p>
-
-    <p>Przygotowałem dla pana animację przedstawiającą czerwonych górników pracujących przy wydobyciu większej ilości węgla, a także spadający węgiel, który później trafia na kupkę. Obejrzyj poniżej:</p>
+    <p>Przygotowałem dla Ciebie animację przedstawiającą postacie przypominające ludzi pracujące przy wydobyciu węgla, a także spadające czarne kółka symbolizujące węgiel, które później trafiają na kupkę. Obejrzyj poniżej:</p>
 
     <div id="miners-container">
       <div class="miner" style="left: 15%;"></div>
@@ -105,7 +110,14 @@
       <div class="miner" style="left: 45%;"></div>
       <div class="miner" style="left: 60%;"></div>
       <div class="miner" style="left: 75%;"></div>
-      <div id="coal-pile"></div>
+
+      <div id="coal-pile">
+        <div class="coal-piece" style="left: 10%;"></div>
+        <div class="coal-piece" style="left: 30%;"></div>
+        <div class="coal-piece" style="left: 50%;"></div>
+        <div class="coal-piece" style="left: 70%;"></div>
+        <div class="coal-piece" style="left: 90%;"></div>
+      </div>
     </div>
   </main>
 
